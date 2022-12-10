@@ -1,0 +1,253 @@
+:root {
+  --primary: #2eb872;
+  --light: #f3f4f5;
+  --dark: #282f34;
+}
+.c-primary {
+  color: var(--primary) !important;
+}
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+.c-dark {
+  color: var(--dark) !important;
+}
+.bg-dark {
+  background-color: var(--dark) !important;
+}
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+/* Start Navbar */
+.navbar .navbar-brand img {
+  max-height: 40px;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--primary) !important;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .ticket {
+  font-size: 0.9rem;
+  padding: 5px 15px;
+}
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--primary) !important;
+}
+/* End Navbar */
+/* Start Landing */
+.landing .header-bg-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../imgs/bg-1.jpg) center center no-repeat;
+  background-size: cover;
+}
+.landing .header-bg-1 .btn {
+  font-size: 14px;
+}
+.landing .header-bg-1 .btn-play {
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+.landing .header-bg-1 .btn-play::after {
+  position: absolute;
+  content: "\f04b";
+  font: var(--fa-font-solid);
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  color: var(--primary);
+}
+.landing .header-bg-1 .btn-play::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: pulse-border 1.5s ease-out infinite;
+}
+@keyframes pulse-border {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 2.5;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+.landing .header-bg-2 {
+  background: url(../imgs/carousel-2.jpg) center center no-repeat;
+  background-size: cover;
+}
+.landing .header-bg-2 .owl-nav {
+  width: 200px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landing .header-bg-2 .owl-nav .owl-dot,
+.landing .header-bg-2 .owl-nav .arrow {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.landing .header-bg-2 .owl-nav .owl-dot span {
+  width: 5px;
+  height: 5px;
+}
+.landing .header-bg-2 .owl-nav .owl-dot.active,
+.landing .header-bg-2 .owl-nav .owl-dot:hover,
+.landing .header-bg-2 .owl-nav .arrow:hover {
+  background-color: var(--primary);
+  border-color: var(--primary) !important;
+}
+@media (max-width: 991px) {
+  .landing .header-bg-2 {
+    height: 30rem;
+  }
+}
+/* End Landing */
+/* Start About */
+.about .image {
+  height: 100%;
+  min-height: 400px;
+}
+.about .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 3rem;
+  bottom: 3rem;
+  border: 5px solid var(--primary);
+}
+.about .image img {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  object-fit: cover;
+}
+/* End About */
+/* Start Facts */
+.facts {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../imgs/bg-1.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* End Facts */
+/* Start Animals */
+.animal .image > div {
+  width: fit-content;
+}
+.animal .image .animal-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px !important;
+  opacity: 0;
+  transition: 0.5s;
+}
+.animal .image:hover .animal-text {
+  padding-bottom: 20px !important;
+  opacity: 1;
+}
+/* End Animals */
+/* Sart visiting */
+.visiting {
+  background: linear-gradient(rgba(0 0 0 / 0.7), rgba(0 0 0 / 0.7)),
+    url("../imgs/bg-2.jpg") center center no-repeat;
+  background-size: cover;
+}
+.visiting ul {
+  background: linear-gradient(rgba(0 0 0 / 0.2), rgba(0 0 0 / 0.2));
+}
+/* End visiting */
+/* Sart Membership */
+.membership .card {
+  background: linear-gradient(rgba(0 0 0 / 0.7), rgba(0 0 0 / 0.7)),
+    url("../imgs/animal-lg-1.jpg") center center no-repeat;
+  background-size: cover;
+}
+.membership .card-2 {
+  background: linear-gradient(rgba(0 0 0 / 0.7), rgba(0 0 0 / 0.7)),
+    url("../imgs/animal-lg-2.jpg") center center no-repeat;
+}
+.membership .card-3 {
+  background: linear-gradient(rgba(0 0 0 / 0.7), rgba(0 0 0 / 0.7)),
+    url("../imgs/animal-lg-3.jpg") center center no-repeat;
+}
+.membership .card .number {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--primary);
+}
+.membership .card .btn:hover {
+  transition: 0.3s;
+  background-color: #fff !important;
+  color: var(--dark) !important;
+}
+/* End Membership */
+/* Start Footer */
+footer {
+  background: linear-gradient(rgba(0 0 0 / 0.7), rgba(0 0 0 / 0.7)),
+    url("../imgs/bg-2.jpg") center center no-repeat;
+  background-size: cover;
+}
+footer .social a {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+footer .social a:hover {
+  background-color: #fff !important;
+  color: var(--primary) !important;
+}
+footer .link {
+  transition: 0.3s ease;
+}
+footer .link:hover {
+  color: var(--primary) !important;
+  transform: translateX(10px);
+}
+footer .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+/* End Footer */
